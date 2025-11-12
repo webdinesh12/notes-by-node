@@ -1,0 +1,6 @@
+npm install express // create server
+npm install cors // allow cross origin request
+npm install morgan //
+npm install nodemon // auto restart server on page save
+npm install dotenv // support .env
+npm install joi // validation package
