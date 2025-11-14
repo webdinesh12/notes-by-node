@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Note Detail - NotesApp</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#3b82f6", // Blue-500
+            "background-light": "#f1f5f9", // Slate-100
+            "background-dark": "#0f172a", // Slate-900
+          },
+          fontFamily: {
+            display: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem", // 8px
+          },
+        },
+      },
+    };
+  </script>
+<style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .material-icons {
+        font-size: 20px;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="flex h-screen">
+<aside class="w-64 flex-shrink-0 bg-white dark:bg-slate-800 p-4 hidden md:flex flex-col">
+<div class="flex items-center gap-2 mb-8">
+<svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.88 2.88C17.27 2.49 17.27 1.86 16.88 1.47C16.49 1.08 15.86 1.08 15.47 1.47L9.47 7.47C9.08 7.86 9.08 8.49 9.47 8.88C9.86 9.27 10.49 9.27 10.88 8.88L16.88 2.88ZM6.25 8.5C6.25 7.81 5.69 7.25 5 7.25C4.31 7.25 3.75 7.81 3.75 8.5V17.5C3.75 18.88 4.87 20 6.25 20H15.25C16.63 20 17.75 18.88 17.75 17.5V13.5C17.75 12.81 17.19 12.25 16.5 12.25C15.81 12.25 15.25 12.81 15.25 13.5V17.5C15.25 17.69 15.19 17.86 15.08 18C15.04 18.04 15.01 18.06 15 18.08C15 18.08 15 18.09 15 18.09C14.9 18.15 14.82 18.2 14.73 18.23C14.67 18.25 14.62 18.25 14.56 18.25H7C6.94 18.25 6.89 18.25 6.83 18.23C6.74 18.2 6.66 18.15 6.56 18.09C6.56 18.09 6.56 18.08 6.56 18.08C6.55 18.06 6.51 18.04 6.48 18C6.37 17.86 6.31 17.69 6.31 17.5L6.25 8.5Z"></path>
+</svg>
+<span class="text-xl font-bold text-slate-800 dark:text-slate-100">NotesApp</span>
+</div>
+<nav class="flex-grow">
+<h3 class="text-sm font-semibold text-slate-500 dark:text-slate-400 mb-2 flex items-center gap-2">
+<span class="material-icons text-base">history</span>
+            Recent Notes
+        </h3>
+<ul class="space-y-1">
+<li><a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 rounded" href="#"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>Recent Notes</a></li>
+<li><a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 rounded" href="#"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>Project Alpha Kickoff</a></li>
+<li><a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 rounded" href="#"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>Lactiors</a></li>
+<li><a class="flex items-center gap-3 px-3 py-2 bg-blue-100 dark:bg-slate-700 text-primary font-semibold rounded" href="#"><span class="w-2.5 h-2.5 rounded-full bg-primary ring-4 ring-primary/20"></span>Brainstorming Ideas</a></li>
+<li><a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 rounded" href="#"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>Brainstorming Ideas</a></li>
+<li><a class="flex items-center gap-3 px-3 py-2 text-slate-700 dark:text-slate-300 rounded" href="#"><span class="w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-600"></span>Grocery List</a></li>
+</ul>
+</nav>
+</aside>
+<main class="flex-1 flex flex-col">
+<header class="flex-shrink-0 bg-white dark:bg-slate-800 border-b border-slate-200 dark:border-slate-700 px-6 py-3 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<button class="md:hidden text-slate-500 dark:text-slate-400">
+<span class="material-icons">menu</span>
+</button>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+<span class="material-icons">search</span>
+</button>
+<button class="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 transition-colors">
+<span class="material-icons">more_horiz</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-slate-200 dark:bg-slate-700 flex items-center justify-center">
+<span class="material-icons text-slate-500 dark:text-slate-400">person</span>
+</button>
+</div>
+</header>
+<div class="flex-1 p-4 sm:p-6 lg:p-8 overflow-y-auto">
+<div class="max-w-4xl mx-auto bg-white dark:bg-slate-800 rounded-lg shadow-sm p-6 sm:p-8 relative">
+<h1 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-slate-50">Meeting Summary - Q3 Planning</h1>
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-400">October 26, 2023, 10:30 AM</p>
+<div class="mt-8 prose prose-slate dark:prose-invert max-w-none prose-p:my-2 prose-strong:font-semibold">
+<p><strong>Attendes:</strong> John, Sarah, Mark, Emily: Q3 financial review, upcoming product launch, marketing strategies.</p>
+<p><strong>Action Items:</strong> Finalize budget report (John) Prepare product demo, (Sarah) Outline social media campaign (Mark)</p>
+<p><strong>Decisions:</strong> Approved Q4 marketing spend, Prioriorize feature set X for next release.</p>
+<p><strong>Notes:</strong> Product launch pushed Need to follow vendor contracts.</p>
+</div>
+<div class="mt-8 flex flex-wrap gap-2">
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">#work</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">#planning</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">#meetings</span>
+<span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300">#project-alpha</span>
+</div>
+<button class="absolute bottom-6 right-6 sm:bottom-8 sm:right-8 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-600 transition-colors">
+<span class="material-icons !text-2xl">edit</span>
+</button>
+</div>
+</div>
+</main>
+</div>
+
+</body></html>
